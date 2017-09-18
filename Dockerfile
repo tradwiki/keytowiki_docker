@@ -11,11 +11,9 @@ RUN apt-get update && apt-get install -yq libasound2-dev
 RUN apt-get update && apt-get install -yq libjack-jackd2-dev 
 RUN apt-get update && apt-get install -yq patchage
 
-
 #Install python dependencies
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
-
 
 #Get pywikibot source
 RUN git clone https://gerrit.wikimedia.org/r/pywikibot/core.git
